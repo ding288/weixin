@@ -1,6 +1,6 @@
-package com.di.weixin.common;
+package com.di.weixin.common.response;
 
-public enum GlobalReturnCode {
+public enum GlobalCode {
 	BUSY(-1, "系统繁忙，请稍候再试"), SUCCESS(0, "请求成功"), 
 	TOKEN_INVALID(40001,"获取access_token时AppSecret错误，或者access_token无效。"),
 	ILLEGAL_DOCUMENT_TYPE(40002, "不合法的凭证类型"),
@@ -53,7 +53,7 @@ public enum GlobalReturnCode {
 	private final int code;
 	private final String desc;
 
-	GlobalReturnCode(int code, String desc) {
+	GlobalCode(int code, String desc) {
 		this.code = code;
 		this.desc = desc;
 	}
@@ -72,7 +72,7 @@ public enum GlobalReturnCode {
 	}
 	
 	public static String getDesc(int code) {
-		for(GlobalReturnCode grc:GlobalReturnCode.values()){
+		for(GlobalCode grc:GlobalCode.values()){
 			if(grc.getCode()==code){
 				return grc.getDesc();
 			}
