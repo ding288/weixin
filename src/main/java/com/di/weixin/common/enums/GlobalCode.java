@@ -1,4 +1,4 @@
-package com.di.weixin.common.response;
+package com.di.weixin.common.enums;
 
 public enum GlobalCode {
 	BUSY(-1, "系统繁忙，请稍候再试"), SUCCESS(0, "请求成功"), 
